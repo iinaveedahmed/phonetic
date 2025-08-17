@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<title>Phonetic Me!</title>
-	<meta name="description" content="Free tool to transcribes English texts into phonetic transcriptions. Help you in conversation to pronounce code or words like Ticked numeber, Car plate number, Flight ID etc. "/>
-	<link href="style.css" rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Phonetic Me! - Modern Phonetic Transcription Tool</title>
+	<meta name="description" content="Free modern tool to transcribe English text into phonetic alphabets. Perfect for spelling out ticket numbers, license plates, flight IDs, and more with NATO, military, and custom phonetic systems.">
+	<link href="style.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
 	<!-- FAV -->
 	<link rel="apple-touch-icon" sizes="57x57" href="asst/apple-touch-icon-57x57.png">
@@ -34,24 +34,106 @@
 	<meta name="theme-color" content="#0fbf96">
 </head>
 <body>
-	<div class="container">
-		<div class="converter">
-			<div class="details">
-				<h1>Phonetic Me!</h1>
-				<p>This is a free tool to transcribes English texts into phonetic transcriptions. Help you in conversation to pronounce code or words like Ticked numeber, Car plate number, Flight ID etc.</p>
+	<div class="app">
+		<header class="header">
+			<div class="container">
+				<div class="logo">
+					<i class="fas fa-microphone-alt"></i>
+					<h1>Phonetic Me!</h1>
+				</div>
+				<div class="tagline">
+					<p>Modern phonetic transcription tool for clear communication</p>
+				</div>
 			</div>
-			<div class="widget">
-				<textarea name="text" id="text" placeholder="Enter text..." autofocus></textarea>
-				<select name="type" id="type">
-				</select>
+		</header>
+
+		<main class="main">
+			<div class="container">
+				<div class="converter-card">
+					<div class="card-header">
+						<h2><i class="fas fa-language"></i> Text to Phonetic</h2>
+						<p>Convert any text into phonetic alphabets for clear pronunciation</p>
+					</div>
+					
+					<div class="input-section">
+						<div class="input-group">
+							<label for="text" class="input-label">
+								<i class="fas fa-edit"></i> Enter your text
+							</label>
+							<textarea 
+								name="text" 
+								id="text" 
+								placeholder="Type your text here... (e.g., ABC123, Flight BA4821)" 
+								autofocus
+								aria-label="Text input for phonetic conversion"
+							></textarea>
+						</div>
+						
+						<div class="input-group">
+							<label for="type" class="input-label">
+								<i class="fas fa-list"></i> Choose phonetic system
+							</label>
+							<div class="select-wrapper">
+								<select name="type" id="type" aria-label="Select phonetic alphabet system">
+								</select>
+								<i class="fas fa-chevron-down select-icon"></i>
+							</div>
+						</div>
+					</div>
+
+					<div class="result-section">
+						<div class="result-header">
+							<h3><i class="fas fa-volume-up"></i> Phonetic Result</h3>
+							<button id="copy-btn" class="copy-btn" title="Copy to clipboard">
+								<i class="fas fa-copy"></i>
+							</button>
+						</div>
+						<div class="result" role="region" aria-label="Phonetic conversion result">
+							<div class="empty-state">
+								<i class="fas fa-arrow-up"></i>
+								<p>Start typing above to see phonetic conversion</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="features">
+					<div class="feature-card">
+						<i class="fas fa-plane"></i>
+						<h3>Aviation</h3>
+						<p>Perfect for flight IDs and aviation communication</p>
+					</div>
+					<div class="feature-card">
+						<i class="fas fa-id-card"></i>
+						<h3>License Plates</h3>
+						<p>Spell out vehicle registration numbers clearly</p>
+					</div>
+					<div class="feature-card">
+						<i class="fas fa-ticket-alt"></i>
+						<h3>Reference Numbers</h3>
+						<p>Communicate ticket and booking numbers accurately</p>
+					</div>
+				</div>
 			</div>
-			<div class="result">
-				
+		</main>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-content">
+					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+						<img alt="Creative Commons License" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+					</a>
+					<div class="footer-text">
+						<span>Phonetic Me</span> by 
+						<a href="http://www.inaveed.com/" target="_blank" rel="noopener">Naveed Ahmed</a> 
+						is licensed under a 
+						<a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">
+							Creative Commons Attribution 4.0 International License
+						</a>
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class="footer">
-			<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Phonetic Me</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.inaveed.com/" property="cc:attributionName" rel="cc:attributionURL">Naveed Ahmed</a> is licensed under a <br><a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
-		</div>
+		</footer>
 	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
